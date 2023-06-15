@@ -1,0 +1,9 @@
+.chart-wrapper{
+    padding: 1rem;
+}
+
+.chart-wrapper > canvas{
+    display: flex !important;
+    width: 100% !important;
+    height: auto !important;
+}

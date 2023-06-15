@@ -1,0 +1,151 @@
+.list-row{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 0.5rem;
+    margin:1.5rem;
+    padding: 1rem;
+    border-radius: 1rem;
+}
+
+.list-row:hover{
+    background-color: var(--darkgrey);
+    transition: all 0.3s;
+}
+
+.list-row td{
+    text-align: left;
+    width: 18%;
+}
+
+.td-image{
+    width: 3rem !important;
+    margin-right: 2rem;
+}
+
+.td-right-align{
+    text-align: right;
+}
+
+.td-center-align{
+    text-align: center;
+}
+
+.desktop-td-mkt{
+    display: block;
+}
+
+.mobile-td-mkt{
+    display: none;
+}
+
+.desktop-total-vol{
+    display: block;
+}
+
+.mobile-total-vol{
+    display: none;
+}
+
+@media only screen and (max-width: 1016px) {
+    .list-row .icon-chip{
+        display: none;
+    }
+
+}
+
+@media only screen and (max-width: 1000px) {
+
+    .list-row .td-text{
+        font-size: 80% !important;
+    }
+
+    .list-row .td-image .coin-logo{
+        width: 2.5rem !important;
+        height: 2.5rem !important;
+    }
+    .css-13xfq8m-MuiTabPanel-root {
+        padding: 12px;
+    }
+}
+
+@media only screen and (max-width: 800px) {
+    .list-row .desktop-td-mkt{
+        display: none;
+    }
+    
+    /* .mobile-td-mkt{
+        display: block;
+    } */
+
+    .list-row .desktop-total-vol{
+        display: none;
+    }
+    
+    .list-row .mobile-total-vol{
+        display: block;
+    }
+
+    .list-row .td-text{
+        font-size: 65% !important;
+    }
+
+    .list-row .td-image .coin-logo{
+        width: 1.75rem !important;
+        height: 1.75rem !important;
+        
+    }
+
+    .list-row .price-chip{
+        border-width: 1px;
+        margin: 1rem 0;
+        padding: 0.25rem;
+        min-width: 34px;
+        font-size: 50% !important;
+    }
+
+    .list-row .chip-red{
+        border-width: 1px !important;
+        margin: 1rem 0;
+        padding: 0.25rem;
+        min-width: 34px;
+    }
+
+    .list-row{
+        margin: 0;
+        padding: 0.5rem;
+        gap: 0.75rem;
+        min-width: 19rem;
+        justify-content: space-between;
+    } 
+
+    .list-row .td-image{
+        width: 2rem !important;
+        margin-right: 0;
+    }
+
+    .list-row .chip-flex{
+        margin: 0;
+    }
+
+    .list-row .name-col{
+        gap: 0.2rem;
+    }
+
+    .watchlist-icon svg{
+        font-size: 1rem !important;
+    }
+
+    .watchlist-icon{
+        width: 1.5rem !important;
+        height: 1.5rem !important;
+        border: 1px solid !important;
+        padding: 0 !important;
+        min-width: auto !important;
+    }
+
+    .css-13xfq8m-MuiTabPanel-root {
+        padding: 6px !important;
+        padding-top: 1rem !important;
+    }
+}

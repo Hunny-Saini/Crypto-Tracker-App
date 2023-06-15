@@ -1,0 +1,153 @@
+
+.flex-info{
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 1.5rem 3rem;
+}
+
+.track-crypto-heading,.real-time-heading{
+    font-size: 6.5rem;
+    margin: 0;
+}
+
+.track-crypto-heading{
+    color: var(--white);
+    -webkit-text-stroke-width: 3px;
+    -webkit-text-stroke-color: var(--white);
+}
+
+.track-crypto-heading:hover{
+    -webkit-text-stroke-width: 3px;
+    -webkit-text-stroke-color: var(--white);
+    color: var(--black);
+    transition: all 0.3s;
+}
+
+.real-time-heading{
+    color: var(--blue);
+    -webkit-text-stroke-width: 2px;
+}
+
+.info-text{
+    font-size: 1rem;
+    color: var(--grey);
+}
+
+.info-btn{
+    display: flex;
+    justify-content: flex-start;
+    gap: 1rem;
+    margin-top: 2rem;
+    align-items: center;
+}
+
+.phone-component{
+    position: relative;
+    width: 50%;
+    padding: 1rem;
+}
+
+.iphone{
+    position: absolute;
+    z-index: 1;
+    min-width: 300px;
+    width: 50%;
+    right: 0;
+    object-fit: contain;
+}
+
+.gredient{
+    position: absolute;
+    min-width: 250px;
+    width: 40%;
+    top: 6rem;
+    right: 0;
+    object-fit: contain;
+}
+
+@media only screen and (max-width: 1250px) {
+    .track-crypto-heading,.real-time-heading{
+        font-size: 5rem;
+        margin: 0;
+    }
+}
+
+@media only screen and (max-width: 1000px) {
+    .iphone{
+        z-index: 1;
+        min-width: 250px;
+    }
+    
+    .gredient{
+        min-width: 200px;
+        top: 6rem;
+    }
+}
+
+
+@media only screen and (max-width: 800px) {
+    .flex-info{
+        flex-direction: column;
+    }
+
+    h1{
+        text-align: center;
+    }
+
+    .phone-component{
+        display: block;
+        margin: auto;
+        margin-top: 3rem;
+    }
+
+    .iphone{
+        position: relative;
+        left: 4rem;
+    }
+
+    .gredient{
+        left: 30%;
+    }
+
+    .track-crypto-heading,.real-time-heading{
+        text-align: center;
+        font-size: 3rem;
+    }
+
+    .left-component{
+        width: 100%;
+    }
+
+    .info-text{
+        text-align: center;
+    }
+
+    .info-btn{
+        justify-content: center;
+    }
+
+    .track-crypto-heading{
+        -webkit-text-stroke-width: 1px;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    .iphone{
+        left: -10%;
+    }
+
+    .gredient{
+        left: 24%;
+    }
+}
+
+@media only screen and (max-width: 400px) {
+    .iphone{
+        left: -24%;
+    }
+
+    .gredient{
+        left: 8%;
+    }
+}
