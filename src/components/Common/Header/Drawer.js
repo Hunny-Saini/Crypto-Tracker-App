@@ -10,17 +10,17 @@ import { toast } from "react-toastify";
 export default function TemporaryDrawer() {
     const [open, setOpen] = useState(false);
 
-    const [darkMode, setDarkMode] = useState(
-        localStorage.getItem("theme") == "dark" ? true : false
-      );
-    
       useEffect(() => {
-        if (localStorage.getItem("theme") == "dark") {
-          setDark();
-        } else {
+        if (localStorage.getItem("theme") == "light") {
           setLight();
+        } else {
+          setDark();
         }
       }, []);
+
+      const [darkMode, setDarkMode] = useState(
+        localStorage.getItem("theme") == "dark" ? true : false
+      );
     
       const changeMode = () => {
         setDarkMode(!darkMode);
