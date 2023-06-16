@@ -19,7 +19,7 @@ export default function TemporaryDrawer() {
       }, []);
 
       const [darkMode, setDarkMode] = useState(
-        localStorage.getItem("theme") == "dark" ? true : false
+        localStorage.getItem("theme") === "dark" ? true : false
       );
     
       const changeMode = () => {
