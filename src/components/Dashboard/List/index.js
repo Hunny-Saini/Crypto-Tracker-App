@@ -100,8 +100,9 @@ const List = ({coin,isWatchlistPage}) => {
                         onClick={(e) => {
                             e.preventDefault();
                             if (added) {
-                                removeFromWatchlist(coin.id);
-                                setAdded(false);
+                                if(removeFromWatchlist(coin.id)){
+                                    setAdded(false);
+                                }
                             } else {
                                 addToWatchlist(coin.id);
                                 setAdded(true);

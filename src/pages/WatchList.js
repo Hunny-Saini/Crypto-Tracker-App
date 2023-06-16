@@ -6,6 +6,7 @@ import { useEffect } from 'react';
 import Loader from '../components/Common/Loader';
 import Button from '../components/Common/Button';
 import TabsComponent from '../components/Dashboard/Tabs';
+import { Link } from 'react-router-dom';
 
 const WatchList = () => {
 
@@ -39,9 +40,9 @@ const WatchList = () => {
                 No Items in the Watchlist
               </h1>
               <div style={{ display: "flex", justifyContent: "center" }}>
-                <a href="/dashboard">
-                  <Button text={"Dashboard"} />
-                </a>
+                <Link to="/dashboard">
+                  <Button text={"Dashboard"} onClick={() => console.log("Clicked")} outlined={false}/>
+                </Link>
               </div>
             </div>
           ) : (
