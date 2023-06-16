@@ -11,28 +11,28 @@ const WatchList = () => {
 
   const coins = JSON.parse(localStorage.getItem("watchlist"));
   const [myWatchlist, setMyWatchlist] = useState([]);
-  const [loading, setLoading] = useState(false);
+  const [isLoading, setisLoading] = useState(false);
 
   useEffect(() => {
     getData();
   }, []);
 
   const getData = async () => {
-    setLoading(true);
+    setisLoading(true);
     const allCoins = await get100Coins();
     if (coins) {
       setMyWatchlist(allCoins.filter((item) => coins.includes(item.id)));
     }
-    setLoading(false);
+    setisLoading(false);
   };
 
   return (
     <div>
-      {loading || !coins ? (
+      {isLoading  ? (
         <Loader />
       ) : (
         <div style={{ minHeight: "90vh" }}>
-          {myWatchlist?.length == 0 || !coins ? (
+          {myWatchlist?.length === 0 || !coins ? (
             <div>
               <Header />
               <h1 style={{ textAlign: "center", marginBottom: "2rem" }}>

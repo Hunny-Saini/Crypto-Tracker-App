@@ -13,7 +13,9 @@ export const removeFromWatchlist = (id) => {
         id.slice(0, 1).toUpperCase() + id.slice(1)
       } removed from the watchlist!`
     );
+    return true;
   } else {
     toast.error("Couldnt remove the coin from the watchlist!");
+    return false;
   }
 };

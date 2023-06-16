@@ -20,7 +20,7 @@ function LineChart({ chartData, priceType, multiAxis }) {
             crypto1: {
                 type: 'linear',
                 display: true,
-                position: 'right',
+                position: 'left',
                 ticks: {
                     // Include a dollar sign in the ticks
                     callback: function (value, index, ticks) {
@@ -31,10 +31,10 @@ function LineChart({ chartData, priceType, multiAxis }) {
                     }
                 }
             },
-            crypto2: {
+            crypto2: multiAxis && {
                 type: 'linear',
                 display: true,
-                position: 'left',
+                position: 'right',
                 ticks: {
                     // Include a dollar sign in the ticks
                     callback: function (value, index, ticks) {
